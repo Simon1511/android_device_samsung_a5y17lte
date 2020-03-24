@@ -18,11 +18,11 @@ LOCAL_PATH := device/samsung/a5y17lte
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# System.prop
-TARGET_SYSTEM_PROP += device/samsung/a5y17lte/system.prop
-
 # call the common setup
 $(call inherit-product, device/samsung/universal7880-common/common.mk)
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/a5y17lte/a5y17lte-vendor.mk)
+
+# Properties
+-include $(LOCAL_PATH)/vendor_prop.mk

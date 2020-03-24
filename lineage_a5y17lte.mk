@@ -34,6 +34,7 @@ TARGET_SCREEN_WIDTH := 1080
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_NAME := lineage_a5y17lte
+TARGET_VENDOR := samsung
 PRODUCT_DEVICE := a5y17lte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A520F
