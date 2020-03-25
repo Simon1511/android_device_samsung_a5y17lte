@@ -39,3 +39,18 @@ PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A520F
 PRODUCT_MANUFACTURER := samsung
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
+
+# Fingerprint
+BUILD_FINGERPRINT := "samsung/a5y17ltexx/a5y17lte:8.0.0/R16NW/A520FXXUCCTA5:user/release-keys"
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="a5y17ltexx-user 8.0.0 R16NW A520FXXUCCTA5 release-keys" \
+    TARGET_DEVICE="a5y17lte"
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.fingerprint=$(BUILD_FINGERPRINT) \
+    ro.bootimage.build.fingerprint=$(BUILD_FINGERPRINT) \
+    ro.vendor.build.fingerprint=$(BUILD_FINGERPRINT)
+
+# Vendor security patch
+VENDOR_SECURITY_PATCH := 2020-01-01
